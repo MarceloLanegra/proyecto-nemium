@@ -1,0 +1,160 @@
+:root {
+  --white: #ffffff;
+  --grey: #808080;
+  --black1: #000000;
+  --black2: #212121;
+  --black3: #424242;
+  --black4: #616161;
+  font-size: 16px;
+}
+
+* {
+  font-weight: normal;
+}
+
+body {
+  margin: 0;
+  color: var(--black1);
+  background-color: var(--white);
+  font-family: "Roboto" !important;
+}
+
+.hero {
+  block-size: 350px;
+  background-image: linear-gradient(
+      3.36deg,
+      #ffffff -63.62%,
+      rgba(255, 255, 255, 0) 43.49%
+    ),
+    url(../images/patron-1.png);
+  background-repeat: repeat;
+  background-size: 100px;
+}
+
+.center {
+  position: relative;
+  width: 1134px;
+  margin: auto;
+  border: 1px solid blue;
+}
+
+.header-wrapper {
+  inline-size: 208px;
+  position: absolute;
+  inset-inline-start: 0;
+  border: 1px solid yellowgreen;
+}
+
+.header-content {
+  margin-block-start: 64px;
+}
+
+.main-wrapper {
+  max-inline-size: 902px;
+  position: absolute;
+  inset-inline-end: 0;
+  border: 1px solid red;
+}
+
+.main-content {
+  color: var(--black2);
+  margin-block-start: 64px;
+}
+
+.main-content h1 {
+  font-size: 60px;
+  line-height: 70px;
+}
+
+.main-content p {
+  line-height: 24px;
+}
+
+.main-content hr {
+  margin-block: 64px;
+  border: 1px solid rgba(97, 97, 97, 0.2);
+}
+
+.section-content {
+  margin-block: 64px;
+}
+
+.section-content,.section-content-extra{
+  color: var(--black3);
+}
+
+.logo {
+  margin-block-start: 40px !important;
+  margin-block-end: 16px;
+}
+
+.section-content img {
+  display: block;
+  max-inline-size: 100%;
+  margin-block-start: 16px;
+}
+
+.section-content i {
+  font-weight: bold;
+}
+
+.section-content p {
+  margin-block-start: 16px;
+}
+
+.section-content h2 {
+  color: var(--black2);
+  font-size: 32px;
+  margin-block-end: 40px;
+}
+
+.section-content h3 {
+  font-size: 24px;
+  display: inline-block;
+  margin-block: 0;
+  padding-block-end: 8px;
+  position: relative;
+  counter-increment: TitleCounter;
+  /* top: 0; */
+  /* background: white; */
+}
+
+.section-content h3::before{
+  content: counter(TitleCounter, decimal) '. ';
+}
+
+.section-content h3::after {
+  content: "";
+  inline-size: 100%;
+  block-size: 4px;
+  background: var(--black3);
+  display: inline-block;
+  position: absolute;
+  left: 0;
+  bottom: 0px;
+}
+
+blockquote{
+  border-left: 4px solid var(--black2);
+  margin-block-start: 32px;
+  margin-inline-start: 0;
+  padding-inline-start: 16px;
+}
+
+blockquote p{
+  font-size: 24px;
+  line-height: 32px !important;
+}
+
+blockquote span{
+  color: var(--black4);
+}
+
+blockquote span::before{
+  content: "- ";
+}
+
+.section-content-extra h2{
+  color: var(--black4);
+  font-size: 32px;
+}
